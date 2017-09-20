@@ -30,11 +30,10 @@ public class ScheduledTasks {
     @Scheduled(fixedRate = 10000)
     public void InsertUser(){
         if(num<=100){
-
+            num++;
+            logger.info("************" + num + "次插入数据开始,时间时:" + format.format(new Date()) + "**************");
+            userDao.insert();
+            logger.info("****************"+num+"次插入数据成功时间时:"+format.format(new Date())+"***********");
         }
-        num++;
-        logger.info("************" + num + "次插入数据开始,时间时:" + format.format(new Date()) + "**************");
-        userDao.insert();
-        logger.info("****************"+num+"次插入数据成功时间时:"+format.format(new Date())+"***********");
     }
 }

@@ -16,8 +16,8 @@ public class userDaoImpl implements userDao{
     private JdbcTemplate jdbcTemplate;
 
     public void insert(){
-        Random r=new Random(100);
-        int num=r.nextInt();
+        Random r=new Random();
+        int num=r.nextInt(101);
         jdbcTemplate.update("INSERT INTO user(name,age) VALUES(?,?)","小明"+num,num);
     }
 }
