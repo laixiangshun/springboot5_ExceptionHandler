@@ -27,6 +27,7 @@ public class ScheduledTasks {
     @Autowired
     private userDao userDao;
     private static int num=0;
+
     @Scheduled(fixedRate = 10000)
     public void InsertUser(){
         if(num<=100){

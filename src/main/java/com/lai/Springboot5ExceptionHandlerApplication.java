@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
@@ -13,6 +14,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //@ComponentScan    //开启自动扫描注解功能，将注解自动注册为bean
 
 @EnableScheduling //启用定时任务的配置
+@EnableAsync //启动异步注解配置
 public class Springboot5ExceptionHandlerApplication {
 
 	public static void main(String[] args) {
